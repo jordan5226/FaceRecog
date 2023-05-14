@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="原始程式檔">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="原始程式檔\FaceRecog">
+      <UniqueIdentifier>{7334cd9d-4411-4af4-841c-b3253d52f163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\UI">
+      <UniqueIdentifier>{94e838f9-5c00-4316-8c58-96ba1ae43f23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\DLL">
+      <UniqueIdentifier>{fc5161dc-83e2-40aa-b33a-444361a5ab8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\DLL\Dlib">
+      <UniqueIdentifier>{52721cb5-356c-4fc3-9082-bb9c482e0e08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source">
+      <UniqueIdentifier>{915ae6d4-9921-431a-8f8b-fdd22d2936a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Util">
+      <UniqueIdentifier>{aac960f4-8bee-4a1e-bfa7-7ba45e655465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Util\Ctrl">
+      <UniqueIdentifier>{35bc290d-75b2-4b11-b629-d914ced49051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Util\HtmlHelp">
+      <UniqueIdentifier>{e075d09f-775c-4a7f-aa37-14730992dd4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Util\Xml">
+      <UniqueIdentifier>{5110b39d-60de-41ae-81d6-a28a356305e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Util\Thread">
+      <UniqueIdentifier>{8df207fd-d0a4-47e5-bce5-f775cd79d7c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Util\Other">
+      <UniqueIdentifier>{9e882048-cc97-4cd4-a822-abbf17d9c225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\EZ_Source\Defined">
+      <UniqueIdentifier>{78cf4cdd-b90d-4f18-b90e-37f77758c54e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceRecog.h">
+      <Filter>原始程式檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\FaceRecogDlg.h">
+      <Filter>原始程式檔\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FaceRecog\FaceRecogEngine.h">
+      <Filter>原始程式檔\FaceRecog</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\FaceEnrollDlg.h">
+      <Filter>原始程式檔\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\PutText.h">
+      <Filter>原始程式檔\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GV_Source\EZDefined.h">
+      <Filter>原始程式檔\EZ_Source\Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\EZFunction_Unicode.h">
+      <Filter>原始程式檔\EZ_Source\Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\EZWndFun.h">
+      <Filter>原始程式檔\EZ_Source\Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\EZFunction_MultiByte.h">
+      <Filter>原始程式檔\EZ_Source\Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\EZFunction_TByte.h">
+      <Filter>原始程式檔\EZ_Source\Defined</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_Thread.h">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_Event.h">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_Mutex.h">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_ThreadXMLDlg.h">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_XMLDlg.h">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Read XML\EZ_MSXMLInterface.h">
+      <Filter>原始程式檔\EZ_Source\Util\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Read XML\Language.h">
+      <Filter>原始程式檔\EZ_Source\Util\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Read XML\EZ_Language.h">
+      <Filter>原始程式檔\EZ_Source\Util\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_StringCast.h">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_SystemTime.h">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_TemplateVectorArray.h">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\HtmlHelp\explainstc.h">
+      <Filter>原始程式檔\EZ_Source\Util\HtmlHelp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_Counter.h">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_WaitTimer.h">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_GetOSVersion.h">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryDC.h">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryBmp.h">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_BitmapInfo.h">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FaceRecog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>標頭檔</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UI\FaceRecogDlg.cpp">
+      <Filter>原始程式檔\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FaceRecog\FaceRecogEngine.cpp">
+      <Filter>原始程式檔\FaceRecog</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UI\FaceEnrollDlg.cpp">
+      <Filter>原始程式檔\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlib-19.24\dlib\all\source.cpp">
+      <Filter>原始程式檔\DLL\Dlib</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UI\PutText.cpp">
+      <Filter>原始程式檔\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_Thread.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_Event.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_Mutex.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_XMLDlg.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Read XML\EZ_MSXMLInterface.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Read XML\EZ_Language.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_SystemTime.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_StringCast.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\HtmlHelp\explainstc.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\HtmlHelp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_Counter.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_WaitTimer.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_GetOSVersion.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryBmp.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryDC.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_BitmapInfo.cpp">
+      <Filter>原始程式檔\EZ_Source\Util\Ctrl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FaceRecog.rc">
+      <Filter>資源檔</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\FaceRecog.rc2">
+      <Filter>資源檔</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\FaceRecog.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

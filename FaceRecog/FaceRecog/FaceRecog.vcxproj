@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BBDE5172-809E-462F-9FF0-91BE406CF0A0}</ProjectGuid>
+    <RootNamespace>FaceRecog</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="OpenCV_Debug_x64.props" />
+    <Import Project="Dlib_Debug_x64.props" />
+    <Import Project="CUDA_Debug_x64.props" />
+    <Import Project="libfacedetect_Debug_x64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="OpenCV_Release_x64.props" />
+    <Import Project="Dlib_Release_x64.props" />
+    <Import Project="CUDA_Release_x64.props" />
+    <Import Project="libfacedetect_Release_x64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>N:\Development\FaceRecog\FaceRecog\FaceRecog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>
+      </SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\FaceRecog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>
+      </SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\EZ_Source\EZFunction_MultiByte.h" />
+    <ClInclude Include="..\..\EZ_Source\EZFunction_TByte.h" />
+    <ClInclude Include="..\..\EZ_Source\EZFunction_Unicode.h" />
+    <ClInclude Include="..\..\EZ_Source\EZWndFun.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryBmp.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryDC.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_ThreadXMLDlg.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_XMLDlg.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_BitmapInfo.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_Counter.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_StringCast.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_SystemTime.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\EZ_TemplateVectorArray.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\HtmlHelp\explainstc.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Read XML\EZ_Language.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Read XML\EZ_MSXMLInterface.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Read XML\Language.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_Event.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_GetOSVersion.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_Mutex.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_Thread.h" />
+    <ClInclude Include="..\..\EZ_Source\Src_Util\Thread\EZ_WaitTimer.h" />
+    <ClInclude Include="..\..\GV_Source\EZDefined.h" />
+    <ClInclude Include="FaceRecog.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Source\FaceRecog\FaceRecogEngine.h" />
+    <ClInclude Include="Source\UI\FaceEnrollDlg.h" />
+    <ClInclude Include="Source\UI\FaceRecogDlg.h" />
+    <ClInclude Include="Source\UI\PutText.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\dlib-19.24\dlib\all\source.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryBmp.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_MemoryDC.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Ctrl\EZ_XMLDlg.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_BitmapInfo.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_Counter.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_StringCast.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\EZ_SystemTime.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\HtmlHelp\explainstc.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Read XML\EZ_Language.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Read XML\EZ_MSXMLInterface.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_Event.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_GetOSVersion.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_Mutex.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_Thread.cpp" />
+    <ClCompile Include="..\..\EZ_Source\Src_Util\Thread\EZ_WaitTimer.cpp" />
+    <ClCompile Include="FaceRecog.cpp" />
+    <ClCompile Include="Source\FaceRecog\FaceRecogEngine.cpp" />
+    <ClCompile Include="Source\UI\FaceEnrollDlg.cpp" />
+    <ClCompile Include="Source\UI\FaceRecogDlg.cpp" />
+    <ClCompile Include="Source\UI\PutText.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FaceRecog.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\FaceRecog.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\FaceRecog.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

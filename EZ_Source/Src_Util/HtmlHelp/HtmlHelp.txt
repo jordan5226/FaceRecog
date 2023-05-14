@@ -1,0 +1,54 @@
+void POS_DLG_COM::ShowContextHelp(CWnd* pWnd, POINT pt, int iCtrlID)
+{
+CString s;
+
+ // Load help text from String Table
+ if(s.LoadString(iCtrlID))
+ {
+  HH_POPUP hPop; // HTML Help popup structure
+
+  // Initialize structure to NULLs	
+  memset(&hPop, 0, sizeof(hPop)); 
+
+  // Set size of structure
+  hPop.cbStruct         = sizeof(hPop);		
+
+  // Yellow background color
+  hPop.clrBackground    = RGB(255, 255, 208);	
+
+  hPop.clrForeground    = -1; // Font color	
+  hPop.rcMargins.left   = -1;			 
+  hPop.rcMargins.bottom = -1;
+  hPop.rcMargins.right  = -1;
+  hPop.rcMargins.top  = -1;
+  hPop.pt               = pt;	
+  hPop.pszText          = s; // Message from String Table
+  hPop.pszFont          = NULL; // Font
+
+#ifdef RES_SJIS
+	hPop.pszFont          = "MS UI Gothic, 9, , , ";
+#endif
+#ifdef RES_RUS
+	hPop.pszFont          = "Arial, 9, , , ";
+#endif
+
+
+#ifdef RES_ARB
+	HWND hwnd=HtmlHelp(NULL/*pWnd->GetSafeHwnd( )*/, NULL,
+		HH_DISPLAY_TEXT_POPUP, (DWORD)&hPop);
+	if(hwnd)
+	{
+		CWnd* pHtmlWnd=CWnd::FromHandle(hwnd);
+		pHtmlWnd->ModifyStyleEx(0,WS_EX_LAYOUTRTL);
+		pHtmlWnd->SetWindowPos(&pWnd->wndTopMost,0,0,0,0,SWP_NOSIZE|SWP_NOMOVE);
+		pHtmlWnd->ShowWindow(SW_HIDE);
+		pHtmlWnd->ShowWindow(SW_SHOW);
+	}
+
+#else
+	HtmlHelp(pWnd->GetSafeHwnd( ), NULL,
+		HH_DISPLAY_TEXT_POPUP, (DWORD)&hPop);
+#endif
+
+ } // End if found a help string for this request
+} // End ShowContextHelp(...)

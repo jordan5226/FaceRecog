@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)..\dlib-19.24;$(SolutionDir)..\dlib-19.24\dlib\external\libjpeg;$(IncludePath)</IncludePath>
+    <ReferencePath>$(SolutionDir)..\dlib-19.24;$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)..\dlib-19.24\build\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>dlib19.24.0_debug_64bit_msvc1928.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\dlib-19.24\build\x64\Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DLIB_JPEG_SUPPORT;DLIB_JPEG_STATIC;DLIB_USE_CUDA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
